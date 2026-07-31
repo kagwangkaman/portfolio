@@ -22,23 +22,23 @@ A simple, bright, professional landing page that turns a resume into a shareable
 Open `index.html` in any text editor and search for the placeholder text below to replace it.
 
 ### 1. Name and title
-Search for `Jane Doe` and `Senior Software Engineer` — replace both with your name and job title. There are several occurrences; update them all (nav, hero, footer).
+Search for `Jane Doe` and `Fresh Graduate Educator` — replace both with your name and job title. There are several occurrences; update them all (nav, hero, footer).
 
 ### 2. Summary and About
 Replace the `summary` paragraph in the hero and the text in the **About** section with your own introduction.
 
 ### 3. Contact info
-Update these lines in the hero pills and the Contact section:
+Update these lines in the Contact section:
 - `jane.doe@example.com`
 - `+1 (555) 123-4567`
 - `Metro Manila, Philippines`
 - `https://www.linkedin.com/in/janedoe`
 
 ### 4. Experience
-Edit the timeline entries: role, company, dates (e.g. `2021 - Present`), and bullet points. To add a role, copy one `.timeline-item` block and paste it below the last one.
+Edit the timeline entries: role, school/organization, dates, and bullet points. To add a role, copy one `.timeline-item` block and paste it below the last one.
 
 ### 5. Education
-Edit the degree, school, and years in the **Education** section. To add more schools, copy the `.edu-card` block.
+Edit the degree, school, and years in the **Education** section. To add more schools, copy an `.edu-card` block inside the `.edu-cards` container.
 
 ### 6. Skills
 Add or remove chips inside each `.skill-group`. To add a group, copy a full `.skill-group` block.
