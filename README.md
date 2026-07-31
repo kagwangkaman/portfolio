@@ -12,11 +12,10 @@ A simple, bright, professional landing page that turns a resume into a shareable
 │   ├── js/main.js          # Small scripts (footer year, scroll-spy nav)
 │   ├── images/             # Photos (e.g. portrait.jpg)
 │   └── resume.pdf          # Your resume. Swap it with your own file
-├── opencode.json           # Loads opencode.md + system.md every session
-├── opencode.md             # Agent rules (secret/credential safety)
-├── system.md               # Persistent session memory
 └── README.md
 ```
+
+> Local-only developer files (kept out of Git): `opencode.json`, `opencode.md`, `system.md` — opencode's project config, agent rules, and persistent session memory.
 
 ## How to make it yours
 

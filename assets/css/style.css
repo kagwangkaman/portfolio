@@ -98,7 +98,7 @@ header.nav {
 }
 .portrait-frame {
   position: relative;
-  width: min(340px, 80vw);
+  width: min(340px, 100%);
   aspect-ratio: 1 / 1;
   background: linear-gradient(135deg, var(--accent), var(--accent-dark));
   padding: 10px;
@@ -336,7 +336,7 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero-grid { gap: 40px; }
   .hero-badge { left: 10px; bottom: 20px; }
   .section-head { max-width: 100%; }
 }
@@ -359,7 +359,7 @@ footer {
   .nav-links::-webkit-scrollbar { display: none; }
   .nav-links a { font-size: 13px; white-space: nowrap; }
   .hero { padding: 60px 0 50px; }
-  .hero-grid { gap: 40px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero h1 { font-size: clamp(32px, 10vw, 42px); }
   .hero .tagline { font-size: 17px; }
   .hero .summary { font-size: 15px; }
