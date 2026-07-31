@@ -164,19 +164,6 @@ header.nav {
 .hero .tagline { font-size: 20px; color: var(--muted); margin-bottom: 18px; font-weight: 500; }
 .hero .summary { font-size: 16px; color: var(--muted); max-width: 640px; margin-bottom: 28px; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
-.contact-pills { display: flex; flex-wrap: wrap; gap: 10px; }
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 13px;
-  color: var(--text);
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 7px 14px;
-  border-radius: 999px;
-}
-.pill:hover { border-color: var(--accent); color: var(--accent); }
 
 section.block { padding: 70px 0; }
 section.block:nth-child(odd) { background: var(--card); }
@@ -321,6 +308,18 @@ section.block:nth-child(odd) { background: var(--card); }
   padding: 18px;
   text-align: center;
 }
+.contact-card .contact-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 12px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-card .contact-icon svg { width: 20px; height: 20px; }
 .contact-card .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
 .contact-card .value { font-weight: 600; font-size: 14px; word-break: break-word; }
 .contact-card .value a { color: var(--text); }
