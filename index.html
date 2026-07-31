@@ -2,282 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <meta name="description" content="Portfolio and resume of Jane Doe — a senior professional available for new opportunities.">
   <meta name="color-scheme" content="light">
   <meta property="og:title" content="Jane Doe — Portfolio">
   <meta property="og:description" content="Portfolio and resume of Jane Doe. View experience, education, skills, and resume.">
   <meta property="og:type" content="website">
   <title>Jane Doe — Portfolio</title>
-  <style>
-    :root {
-      --accent: #2563eb;
-      --accent-dark: #1d4ed8;
-      --accent-soft: #eff6ff;
-      --bg: #fafafa;
-      --card: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-      --serif: Georgia, 'Times New Roman', serif;
-      --sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--sans);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--accent-dark); }
-
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-
-    header.nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-    }
-    .nav-brand { font-weight: 700; letter-spacing: -0.02em; color: var(--text); font-size: 17px; }
-    .nav-links { display: flex; align-items: center; gap: 22px; }
-    .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; }
-    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
-    .nav-links a.active { font-weight: 600; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 18px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .btn:active { transform: scale(0.97); }
-    .btn-primary { background: var(--accent); color: #fff; }
-    .btn-primary:hover { background: var(--accent-dark); color: #fff; }
-    .btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
-    .btn-ghost:hover { background: #f3f4f6; }
-
-    .hero { padding: 90px 0 70px; }
-    .hero-eyebrow {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: var(--accent-soft);
-      padding: 5px 12px;
-      border-radius: 999px;
-      margin-bottom: 18px;
-    }
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(36px, 6vw, 56px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: 14px;
-    }
-    .hero .tagline { font-size: 20px; color: var(--muted); margin-bottom: 18px; font-weight: 500; }
-    .hero .summary { font-size: 16px; color: var(--muted); max-width: 640px; margin-bottom: 28px; }
-    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
-    .contact-pills { display: flex; flex-wrap: wrap; gap: 10px; }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 13px;
-      color: var(--text);
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 7px 14px;
-      border-radius: 999px;
-    }
-    .pill:hover { border-color: var(--accent); color: var(--accent); }
-
-    section.block { padding: 70px 0; }
-    section.block:nth-child(odd) { background: var(--card); }
-    .section-head { max-width: 640px; margin-bottom: 40px; }
-    .section-head h2 {
-      font-family: var(--serif);
-      font-size: clamp(26px, 4vw, 36px);
-      letter-spacing: -0.02em;
-      margin-bottom: 8px;
-    }
-    .section-head p { color: var(--muted); font-size: 15px; }
-
-    .resume-frame {
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      overflow: hidden;
-      background: var(--card);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-    }
-    .resume-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      padding: 14px 18px;
-      background: #f9fafb;
-      border-bottom: 1px solid var(--border);
-    }
-    .resume-bar .file {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      font-weight: 600;
-      font-size: 14px;
-      color: var(--text);
-    }
-    .resume-bar .file .icon {
-      width: 26px;
-      height: 26px;
-      border-radius: 6px;
-      background: #fee2e2;
-      color: #dc2626;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 700;
-    }
-    .resume-bar .actions { display: flex; gap: 8px; }
-    .resume-bar .btn { padding: 6px 14px; font-size: 13px; }
-    .resume-body { height: 600px; background: #eef0f2; }
-    .resume-body object { width: 100%; height: 100%; border: 0; display: block; }
-    .resume-fallback {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .resume-fallback .big { font-size: 30px; margin-bottom: 12px; color: var(--muted); }
-    .resume-fallback h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 8px; }
-    .resume-fallback p { color: var(--muted); font-size: 14px; max-width: 420px; }
-    .resume-fallback code {
-      background: #f3f4f6;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 2px 8px;
-      font-size: 13px;
-    }
-
-    .timeline { position: relative; padding-left: 26px; }
-    .timeline::before {
-      content: "";
-      position: absolute;
-      left: 6px;
-      top: 6px;
-      bottom: 6px;
-      width: 2px;
-      background: var(--border);
-    }
-    .timeline-item { position: relative; padding-bottom: 34px; }
-    .timeline-item:last-child { padding-bottom: 0; }
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -26px;
-      top: 7px;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--accent);
-      border: 3px solid #fff;
-      box-shadow: 0 0 0 2px var(--border);
-    }
-    .timeline-item .role { font-size: 17px; font-weight: 700; }
-    .timeline-item .company { color: var(--accent); font-weight: 600; }
-    .timeline-item .dates {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--muted);
-      background: #f3f4f6;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 3px 10px;
-      margin: 6px 0 10px;
-    }
-    .timeline-item ul { padding-left: 18px; color: var(--muted); font-size: 14px; }
-    .timeline-item li { margin-bottom: 4px; }
-
-    .edu-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 22px 24px;
-    }
-    .edu-card .degree { font-size: 16px; font-weight: 700; margin-bottom: 2px; }
-    .edu-card .school { color: var(--accent); font-weight: 600; font-size: 14px; }
-    .edu-card .year { color: var(--muted); font-size: 13px; margin-top: 6px; }
-
-    .skill-group { margin-bottom: 26px; }
-    .skill-group h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 12px; }
-    .skill-group .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .chip {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 7px 15px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text);
-    }
-    .chip:hover { border-color: var(--accent); color: var(--accent); }
-
-    .contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 28px; }
-    .contact-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px;
-      text-align: center;
-    }
-    .contact-card .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
-    .contact-card .value { font-weight: 600; font-size: 14px; word-break: break-word; }
-    .contact-card .value a { color: var(--text); }
-    .contact-card .value a:hover { color: var(--accent); }
-    .contact-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 28px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    @media (max-width: 640px) {
-      .nav-links a { font-size: 13px; }
-      .nav-links .nav-link-label { display: none; }
-      .hero { padding: 60px 0 50px; }
-      .resume-body { height: 480px; }
-    }
-    @media print {
-      header.nav, .hero-cta, .contact-actions, .resume-bar .actions, .resume-frame { display: none; }
-      section.block { padding: 20px 0; background: #fff !important; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -297,22 +29,54 @@
 
   <section id="home" class="hero">
     <div class="container">
-      <span class="hero-eyebrow">Open to opportunities</span>
-      <h1>Jane Doe</h1>
-      <p class="tagline">Senior Software Engineer and Team Lead</p>
-      <p class="summary">
-        Results-driven professional with 8+ years of experience delivering high-impact solutions,
-        leading teams, and driving measurable outcomes. Known for clear communication, strong
-        problem-solving, and a commitment to quality.
-      </p>
-      <div class="hero-cta">
-        <a href="#resume" class="btn btn-primary">View Resume</a>
-      </div>
-      <div class="contact-pills">
-        <a class="pill" href="mailto:jane.doe@example.com">jane.doe@example.com</a>
-        <a class="pill" href="tel:+15551234567">+1 (555) 123-4567</a>
-        <span class="pill">Metro Manila, Philippines</span>
-        <a class="pill" href="https://www.linkedin.com/in/janedoe" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <span class="hero-eyebrow">Open to opportunities</span>
+          <h1>Jane Doe</h1>
+          <p class="tagline">Senior Software Engineer and Team Lead</p>
+          <p class="summary">
+            Results-driven professional with 8+ years of experience delivering high-impact solutions,
+            leading teams, and driving measurable outcomes. Known for clear communication, strong
+            problem-solving, and a commitment to quality.
+          </p>
+          <div class="hero-cta">
+            <a href="#resume" class="btn btn-primary">View Resume</a>
+          </div>
+          <div class="contact-pills">
+            <a class="pill" href="mailto:jane.doe@example.com">jane.doe@example.com</a>
+            <a class="pill" href="tel:+15551234567">+1 (555) 123-4567</a>
+            <span class="pill">Metro Manila, Philippines</span>
+            <a class="pill" href="https://www.linkedin.com/in/janedoe" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="portrait-frame">
+            <div class="portrait-inner">
+              <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Professional portrait of Jane Doe">
+                <defs>
+                  <linearGradient id="avatarBg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#eef2ff"/>
+                    <stop offset="1" stop-color="#e0e7ff"/>
+                  </linearGradient>
+                  <linearGradient id="avatarBody" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#94a3b8"/>
+                    <stop offset="1" stop-color="#64748b"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="400" fill="url(#avatarBg)"/>
+                <g fill="url(#avatarBody)">
+                  <circle cx="200" cy="158" r="74"/>
+                  <path d="M200 250c-74 0-122 38-122 98v52h244v-52c0-60-48-98-122-98z"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="hero-badge">
+            <span class="badge-num">8+</span>
+            <span class="badge-label">Years of<br>Experience</span>
+          </div>
+          <span class="deco-dots" aria-hidden="true"></span>
+        </div>
       </div>
     </div>
   </section>
@@ -345,18 +109,18 @@
             resume.pdf
           </span>
           <div class="actions">
-            <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
-            <a class="btn btn-primary" href="resume.pdf" download>Download</a>
+            <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+            <a class="btn btn-primary" href="assets/resume.pdf" download>Download</a>
           </div>
         </div>
         <div class="resume-body">
-          <object id="resumeObj" data="resume.pdf" type="application/pdf" title="Resume PDF">
+          <object id="resumeObj" data="assets/resume.pdf" type="application/pdf" title="Resume PDF">
             <div class="resume-fallback">
               <div>
                 <div class="big">DOC</div>
                 <h3>Resume coming soon</h3>
                 <p>
-                  Add a file named <code>resume.pdf</code> to the project root so it appears here.
+                  Add a file named <code>resume.pdf</code> to <code>assets/</code> so it appears here.
                   See the README for instructions.
                 </p>
               </div>
@@ -493,25 +257,6 @@
     <div class="container">&copy; <span id="year"></span> Jane Doe. All rights reserved.</div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    var sections = ['home', 'about', 'resume', 'experience', 'education', 'skills', 'contact'];
-    var links = document.querySelectorAll('.nav-links a[href^="#"]');
-
-    function onScroll() {
-      var pos = window.scrollY + 120;
-      var current = 'home';
-      sections.forEach(function (id) {
-        var el = document.getElementById(id);
-        if (el && el.offsetTop <= pos) current = id;
-      });
-      links.forEach(function (link) {
-        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
-      });
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

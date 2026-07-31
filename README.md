@@ -4,10 +4,19 @@ A simple, bright, professional landing page that turns a resume into a shareable
 
 ## What's inside
 
-| File | Purpose |
-| --- | --- |
-| `index.html` | The full portfolio page (styles + content + small scripts inline) |
-| `resume.pdf` | Your resume. Swap it with your own file — the page renders it for recruiters. |
+```
+.
+├── index.html              # The portfolio page (content markup)
+├── assets/
+│   ├── css/style.css       # All page styles
+│   ├── js/main.js          # Small scripts (footer year, scroll-spy nav)
+│   ├── images/             # Photos (e.g. portrait.jpg)
+│   └── resume.pdf          # Your resume. Swap it with your own file
+├── opencode.json           # Loads opencode.md + system.md every session
+├── opencode.md             # Agent rules (secret/credential safety)
+├── system.md               # Persistent session memory
+└── README.md
+```
 
 ## How to make it yours
 
@@ -36,7 +45,7 @@ Edit the degree, school, and years in the **Education** section. To add more sch
 Add or remove chips inside each `.skill-group`. To add a group, copy a full `.skill-group` block.
 
 ### 7. Accent color (optional)
-The whole page uses one accent color defined at the top of the `<style>` block:
+The whole page uses one accent color defined at the top of `assets/css/style.css`:
 
 ```css
 :root {
@@ -45,7 +54,7 @@ The whole page uses one accent color defined at the top of the `<style>` block:
 ```
 
 ### 8. Upload your resume
-Replace `resume.pdf` in this folder with your own file **named exactly** `resume.pdf`. The page detects the file automatically and shows it in the built-in viewer. If the file is missing, visitors see a clean "Resume coming soon" note instead of a broken box.
+Replace `assets/resume.pdf` with your own file **named exactly** `resume.pdf`. The page detects the file automatically and shows it in the built-in viewer. If the file is missing, visitors see a clean "Resume coming soon" note instead of a broken box.
 
 > Tip: If you have a Google Docs/Drive resume, export it as a PDF and name it `resume.pdf`.
 
@@ -63,7 +72,7 @@ npx serve .
 2. Go to [vercel.com](https://vercel.com) and click **Add New > Project**.
 3. Import the repository.
 4. Framework Preset: **Other** (leave build command and output directory empty).
-5. Click **Deploy**. Vercel serves `index.html` at the root and `resume.pdf` at `/resume.pdf`.
+5. Click **Deploy**. Vercel serves `index.html` at the root and `resume.pdf` at `/assets/resume.pdf`.
 
 Every push to the repository redeploys automatically.
 
