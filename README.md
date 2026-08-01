@@ -35,7 +35,7 @@ Update these lines in the Contact section:
 - `https://www.linkedin.com/in/janedoe`
 
 ### 3b. Portrait (optional)
-Replace `assets/images/portrait.svg` with your own photo (any image format — `jpg`, `png`, etc.) and update the `<img>` src in `index.html`.
+Replace `assets/images/portrait.jpg` with your own photo and update the `<img>` src in `index.html` if you change the filename.
 
 ### 4. Experience
 Edit the timeline entries: role, school/organization, dates, and bullet points. To add a role, copy one `.timeline-item` block and paste it below the last one.
