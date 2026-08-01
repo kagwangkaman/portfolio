@@ -61,6 +61,30 @@ header.nav {
 .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
 .nav-links a:hover, .nav-links a.active { color: var(--accent); }
 .nav-links a.active { font-weight: 600; }
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--text);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .btn {
   display: inline-flex;
   align-items: center;
@@ -333,23 +357,34 @@ footer {
   .section-head { max-width: 100%; }
 }
 @media (max-width: 640px) {
-  .nav-inner {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px 0 8px;
-    row-gap: 8px;
-  }
+  .nav-inner { height: 60px; }
   .nav-brand { font-size: 16px; }
+  .nav-toggle { display: inline-flex; }
   .nav-links {
-    order: 2;
-    width: 100%;
-    gap: 20px;
-    overflow-x: auto;
-    padding-bottom: 2px;
-    scrollbar-width: none;
+    order: 3;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
   }
-  .nav-links::-webkit-scrollbar { display: none; }
-  .nav-links a { font-size: 13px; white-space: nowrap; }
+  .nav-links.open { max-height: 420px; }
+  .nav-links a {
+    padding: 13px 22px;
+    font-size: 15px;
+    border-top: 1px solid var(--border);
+  }
+  .nav-links a::after { display: none; }
+  .nav-links a:hover, .nav-links a.active { background: var(--accent-soft); color: var(--accent); }
   .hero { padding: 60px 0 50px; }
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero h1 { font-size: clamp(32px, 10vw, 42px); }
