@@ -22,7 +22,7 @@ A simple, bright, professional landing page that turns a resume into a shareable
 Open `index.html` in any text editor and search for the placeholder text below to replace it.
 
 ### 1. Name and title
-Search for `Jane Doe` and `Software Engineer` — replace both with your name and job title. There are several occurrences; update them all (nav, hero, footer).
+Search for `Jane Doe` and `Educator` — replace both with your name and job title. There are several occurrences; update them all (nav, hero, footer).
 
 ### 2. Summary and About
 Replace the `summary` paragraph in the hero and the text in the **About** section with your own introduction.
