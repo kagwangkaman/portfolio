@@ -81,7 +81,7 @@ header.nav {
   position: relative;
   width: min(340px, 100%);
   aspect-ratio: 1 / 1;
-  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  background: rgba(0, 0, 0, 0.08);
   padding: 10px;
   border-radius: 30px;
   box-shadow: 0 24px 60px rgba(37, 99, 235, 0.25);
