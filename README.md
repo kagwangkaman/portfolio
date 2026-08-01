@@ -22,17 +22,18 @@ A simple, bright, professional landing page that turns a resume into a shareable
 Open `index.html` in any text editor and search for the placeholder text below to replace it.
 
 ### 1. Name and title
-Search for `Jane Doe` and `Fresh Graduate` — replace both with your name and job title. There are several occurrences; update them all (nav, hero, footer).
+Search for `Jane Doe` and `Software Engineer` — replace both with your name and job title. There are several occurrences; update them all (nav, hero, footer).
 
 ### 2. Summary and About
 Replace the `summary` paragraph in the hero and the text in the **About** section with your own introduction.
 
 ### 3. Contact info
 Update these lines in the Contact section:
-- `jane.doe@example.com`
-- `+63 917 123 4567`
-- `Metro Manila, Philippines`
-- `https://www.linkedin.com/in/janedoe`
+- `jordan.rivera@email.com`
+- `(555) 123-4567`
+- `San Francisco, CA`
+- `https://www.linkedin.com/in/jordanrivera`
+- `https://github.com/jrivera`
 
 ### 3b. Portrait (optional)
 Replace `assets/images/portrait.png` with your own photo and update the `<img>` src in `index.html` if you change the filename.
