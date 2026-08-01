@@ -29,11 +29,11 @@ Replace the `summary` paragraph in the hero and the text in the **About** sectio
 
 ### 3. Contact info
 Update these lines in the Contact section:
-- `jordan.rivera@email.com`
+- `jane.doe@example.com`
 - `(555) 123-4567`
 - `San Francisco, CA`
-- `https://www.linkedin.com/in/jordanrivera`
-- `https://github.com/jrivera`
+- `https://www.linkedin.com/in/janedoe`
+- `https://github.com/janedoe`
 
 ### 3b. Portrait (optional)
 Replace `assets/images/portrait.png` with your own photo and update the `<img>` src in `index.html` if you change the filename.

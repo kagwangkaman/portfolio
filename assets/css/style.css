@@ -236,6 +236,55 @@ section.block:nth-child(odd) { background: var(--card); }
   padding: 2px 8px;
   font-size: 13px;
 }
+.resume-html {
+  display: none;
+  height: 100%;
+  overflow-y: auto;
+  background: #eef0f2;
+  padding: 24px;
+}
+.resume-html .paper {
+  max-width: 780px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 36px 42px;
+  color: var(--text);
+}
+.paper-head {
+  text-align: center;
+  border-bottom: 2px solid var(--text);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+.paper-head h1 {
+  font-family: var(--serif);
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.paper-contact { font-size: 12px; color: var(--muted); line-height: 1.7; }
+.paper-section { margin-bottom: 20px; }
+.paper-section > h2 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+.paper-section > p { font-size: 13px; }
+.paper-entry { margin-bottom: 16px; }
+.paper-entry:last-child { margin-bottom: 0; }
+.paper-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.paper-title { font-weight: 700; font-size: 14px; }
+.paper-date { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.paper-sub { color: var(--accent-dark); font-weight: 600; font-size: 13px; margin: 2px 0 4px; }
+.paper ul { padding-left: 18px; margin: 0; font-size: 13px; }
+.paper li { margin-bottom: 3px; }
+.paper-skill { margin-bottom: 4px; }
 
 .timeline { position: relative; padding-left: 26px; }
 .timeline::before {
@@ -393,6 +442,9 @@ footer {
   .hero-media .portrait-frame { width: min(320px, 100%); margin: 0 auto; }
   section.block { padding: 50px 0; }
   .resume-body { height: 480px; }
+  .resume-body object { display: none; }
+  .resume-html { display: block; padding: 16px; }
+  .resume-html .paper { padding: 28px 22px; }
   .resume-bar { padding: 12px 14px; }
   .contact-cards { grid-template-columns: 1fr; }
 }
@@ -400,6 +452,8 @@ footer {
   .hero { padding: 48px 0 40px; }
   .hero-grid { gap: 32px; }
   .resume-body { height: 420px; }
+  .resume-html { padding: 12px; }
+  .resume-html .paper { padding: 24px 18px; }
   .resume-bar .actions { width: 100%; justify-content: flex-end; }
   .contact-card { padding: 14px; }
 }
