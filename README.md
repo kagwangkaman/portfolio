@@ -10,7 +10,7 @@ A simple, bright, professional landing page that turns a resume into a shareable
 ├── assets/
 │   ├── css/style.css       # All page styles
 │   ├── js/main.js          # Small scripts (footer year, scroll-spy nav)
-│   ├── images/             # Photos (e.g. portrait.svg / portrait.jpg)
+│   ├── images/             # Photos (e.g. portrait.png)
 │   └── resume.pdf          # Your resume. Swap it with your own file
 └── README.md
 ```
@@ -35,7 +35,7 @@ Update these lines in the Contact section:
 - `https://www.linkedin.com/in/janedoe`
 
 ### 3b. Portrait (optional)
-Replace `assets/images/portrait.jpg` with your own photo and update the `<img>` src in `index.html` if you change the filename.
+Replace `assets/images/portrait.png` with your own photo and update the `<img>` src in `index.html` if you change the filename.
 
 ### 4. Experience
 Edit the timeline entries: role, school/organization, dates, and bullet points. To add a role, copy one `.timeline-item` block and paste it below the last one.
