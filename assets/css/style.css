@@ -92,6 +92,7 @@ header.nav {
   border-radius: 22px;
   overflow: hidden;
   background: #ffffff;
+  padding-top: 10%;
 }
 .portrait-inner img {
   width: 100%;
